@@ -1,0 +1,25 @@
+server:
+  port: 18088
+
+spring:
+  application:
+    name: account-service
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:/h2/db
+    password: h2
+    username: h2
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  kafka:
+    bootstrap-servers: ${KAFKA_ADDRESS:127.0.0.1:9092,127.0.0.1:10092,127.0.0.1:11092}
+    consumer:
+      value-deserializer: org.springframework.kafka.support.serializer.JsonSerializer
+      enable-auto-commit: false
+      isolation-level: read_committed
