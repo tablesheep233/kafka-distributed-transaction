@@ -1,12 +1,12 @@
 server:
-  port: 18089
+  port: 18088
 
 spring:
   application:
-    name: order-service
+    name: pay-service
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:/h2/order
+    url: jdbc:h2:file:/h2/pay
     password: h2
     username: h2
   h2:
@@ -32,5 +32,3 @@ spring:
       isolation-level: read_committed
       properties:
         spring.json.trusted.packages: "*"
-    listener:
-      ack-mode: manual_immediate

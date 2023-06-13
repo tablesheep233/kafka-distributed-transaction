@@ -10,7 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>order-service</module>
-        <module>account-service</module>
+        <module>pay-service</module>
+        <module>shared</module>
     </modules>
 
     <properties>
